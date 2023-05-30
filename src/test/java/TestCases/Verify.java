@@ -7,6 +7,7 @@ import org.testng.asserts.SoftAssert;
 import org.openqa.selenium.By;
 import resourses.baseclass;
 import resourses.commonMethods;
+import resourses.constants;
 import PageObjectModel.verifyLogin;
 
 
@@ -38,20 +39,19 @@ public class Verify extends baseclass{
 	
 	verifyLogin LPO= new verifyLogin(driver);
 	
-	LPO.Username().sendKeys("Shubham");
-	LPO.Password().sendKeys("Shubham@2001");
+	LPO.Username().sendKeys(constants.username);
+	LPO.Password().sendKeys(constants.password);
 	LPO.Click().click();
 	
 	
     String ActualText=LPO.ErrorMessage().getText();
 	
-	String expectedText="Please check your  and password. If you still can't log in, contact your Salesforce administrator.";
-	
+	String expectedText=constants.actualvalue;
 	commonMethods.HandleAssertion(ActualText,expectedText,"Test case failed");
-	
 	
 	System.out.println("Testpass");
 
+	System.out.println("Testpass");
 	
 	
 	}
