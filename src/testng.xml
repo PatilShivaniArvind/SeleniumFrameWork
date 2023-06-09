@@ -3,8 +3,10 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
+		
       <class name="TestCases.Verify"/>
       <class name="TestCases.verifySignUpPage"/>
+      
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
